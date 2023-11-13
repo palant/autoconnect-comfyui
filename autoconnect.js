@@ -68,7 +68,10 @@ const ext = {
     window.addEventListener("keydown", event =>
     {
       if (event.key.toUpperCase() == "A" && event.altKey && !event.ctrlKey && !event.metaKey)
+      {
+        event.preventDefault();
         doConnect();
+      }
     });
   },
 };
